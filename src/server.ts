@@ -61,6 +61,19 @@ server.get<{Params: DriverParams}> ("/drivers/:id",
     }
     });
 
+    server.get<{Params: DriverParams}> ("/teams/:id",
+    async (request, response) => {
+    const id = parseInt(request.params.id);
+    const driver = drivers.find( d => d.id === id)
+    if(!driver){
+        response.type("application/json").code(404);
+        return {message: "Driver Not Found"}
+    } else {
+        response.type("application/json").code(200);
+        return { driver }
+    }
+    });
+
 server.listen({ port: 3333 }, () => {
     console.log("Server init");
 });
