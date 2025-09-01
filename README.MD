@@ -53,7 +53,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 $ git clone https://github.com/GustavoMaiaOliveira/Minimal_API_Formula_1
 
 # Go into the repository
-$ cd node-blue-boilerplate
+$ cd Minimal_API_Formula_1
 
 # Install dependencies
 $ npm install
